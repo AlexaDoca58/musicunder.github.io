@@ -9,28 +9,40 @@ document.addEventListener('DOMContentLoaded', () => {
     const progressBar = document.getElementById('progress-bar');
     const currentTimeEl = document.getElementById('current-time');
     const durationEl = document.getElementById('duration');
-    const albumArtImg = document.getElementById('album-art');
-    const albumPlaceholder = document.querySelector('.album-placeholder');
 
     const tracks = [
 
         // Asegúrate de que los nombres de archivo sean EXACTOS como en tu carpeta.
-        // **IMPORTANTE**: Reemplaza 'URL_DE_LA_IMAGEN_DEL_ALBUM_X.jpg' con la URL real de cada carátula.
-        { title: '01. Once Upon a Time', src: './Audio/01. Once Upon A Time.mp3', albumArtSrc: 'https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/media/image/2016/05/undertale-ost-front-art-by-ggkhh-d922p82.jpg' },
-        { title: '02. Fallen Down', src: './Audio/04. Fallen Down.mp3', albumArtSrc: 'https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/media/image/2016/05/undertale-ost-front-art-by-ggkhh-d922p82.jpg' },
-        { title: '03. Your Best Friend', src: './Audio/03. Your Best Friend.mp3', albumArtSrc: 'https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/media/image/2016/05/undertale-ost-front-art-by-ggkhh-d922p82.jpg' },
-        { title: '04. Ruins', src: './Audio/05. Ruins.mp3', albumArtSrc: 'https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/media/image/2016/05/undertale-ost-front-art-by-ggkhh-d922p82.jpg' },
-        { title: '05. Heartache', src: './Audio/14. Heartache.mp3', albumArtSrc: 'https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/media/image/2016/05/undertale-ost-front-art-by-ggkhh-d922p82.jpg' },
-        { title: '06. Snowdin Town', src: './Audio/22. Snowdin Town.mp3', albumArtSrc: 'https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/media/image/2016/05/undertale-ost-front-art-by-ggkhh-d922p82.jpg' },
-        { title: '07. Bonetrousle', src: './Audio/24. Bonetrousle.mp3', albumArtSrc: 'https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/media/image/2016/05/undertale-ost-front-art-by-ggkhh-d922p82.jpg' },
-        { title: '08. Waterfall', src: './Audio/31. Waterfall.mp3', albumArtSrc: 'https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/media/image/2016/05/undertale-ost-front-art-by-ggkhh-d922p82.jpg' },
-        { title: '09. Temmie Village', src: './Audio/43. Temmie Village.mp3', albumArtSrc: 'https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/media/image/2016/05/undertale-ost-front-art-by-ggkhh-d922p82.jpg' },
-        { title: '10. Spear of Justice', src: './Audio/46. Spear of Justice.mp3', albumArtSrc: 'https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/media/image/2016/05/undertale-ost-front-art-by-ggkhh-d922p82.jpg' },
-        { title: '11. Dating Start!', src: './Audio/25. Dating Start!.mp3', albumArtSrc: 'https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/media/image/2016/05/undertale-ost-front-art-by-ggkhh-d922p82.jpg' },
-        { title: '12. Death by Glamour', src: './Audio/67. Death by Glamour.mp3', albumArtSrc: 'https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/media/image/2016/05/undertale-ost-front-art-by-ggkhh-d922p82.jpg' },
-        { title: '13. Spider Dance', src: './Audio/58. Spider Dance.mp3', albumArtSrc: 'https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/media/image/2016/05/undertale-ost-front-art-by-ggkhh-d922p82.jpg' },
-        { title: '14. ASGORE', src: './Audio/74. ASGORE.mp3', albumArtSrc: 'https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/media/image/2016/05/undertale-ost-front-art-by-ggkhh-d922p82.jpg' },
-        { title: '15. MEGALOVANIA', src: './Audio/94. MEGALOVANIA.mp3', albumArtSrc: 'https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/media/image/2016/05/undertale-ost-front-art-by-ggkhh-d922p82.jpg' }
+
+        { title: '01. Once Upon a Time', src: './Audio/01. Once Upon A Time.mp3' },
+
+        { title: '02. Fallen Down', src: './Audio/04. Fallen Down.mp3' },
+
+        { title: '03. Your Best Friend', src: './Audio/03. Your Best Friend.mp3' },
+
+        { title: '04. Ruins', src: './Audio/05. Ruins.mp3' },
+
+        { title: '05. Heartache', src: './Audio/14. Heartache.mp3' },
+
+        { title: '06. Snowdin Town', src: './Audio/22. Snowdin Town.mp3' },
+
+        { title: '07. Bonetrousle', src: './Audio/24. Bonetrousle.mp3' },
+
+        { title: '08. Waterfall', src: './Audio/31. Waterfall.mp3' },
+
+        { title: '09. Temmie Village', src: './Audio/43. Temmie Village.mp3' },
+
+        { title: '10. Spear of Justice', src: './Audio/46. Spear of Justice.mp3' },
+
+        { title: '11. Dating Start!', src: './Audio/25. Dating Start!.mp3' },
+
+        { title: '12. Death by Glamour', src: './Audio/67. Death by Glamour.mp3' },
+
+        { title: '13. Spider Dance', src: './Audio/58. Spider Dance.mp3' },
+
+        { title: '14. ASGORE', src: './Audio/74. ASGORE.mp3' },
+
+        { title: '15. MEGALOVANIA', src: './Audio/94. MEGALOVANIA.mp3' }
 
     ];
 
@@ -96,17 +108,6 @@ document.addEventListener('DOMContentLoaded', () => {
             progressBar.max = audio.duration;
             durationEl.textContent = formatTime(audio.duration);
         };
-        // Cargar y mostrar la carátula del álbum
-        if (tracks[currentTrackIndex].albumArtSrc) {
-            albumArtImg.src = tracks[currentTrackIndex].albumArtSrc;
-            albumPlaceholder.style.display = 'none';
-            albumArtImg.style.display = 'block';
-        } else {
-            // Si no hay imagen, mostrar el placeholder
-            albumArtImg.src = '';
-            albumArtImg.style.display = 'none';
-            albumPlaceholder.style.display = 'block';
-        }
     };
 
     const togglePlayPause = () => {
