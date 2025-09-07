@@ -20,24 +20,31 @@
         </nav>
 
         <div id="music-section" class="content-section active">
-            <div class="player-visualizer-section">
-                <div class="player-controls">
-                    <button id="play-pause-btn"><i class="fa-solid fa-play"></i></button>
-                    <div class="track-info">
-                        <span id="track-title"></span>
+            <div class="player-container">
+                <div class="player-visualizer-section">
+                    <div class="player-controls">
+                        <button id="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                        <div class="track-info">
+                            <span id="track-title"></span>
+                        </div>
+                    </div>
+
+                    <div class="progress-container">
+                        <input type="range" id="progress-bar" value="0" step="1">
+                        <div class="time-info">
+                            <span id="current-time">0:00</span>
+                            <span id="duration">0:00</span>
+                        </div>
+                    </div>
+                    
+                    <div class="visualizer-container">
+                        <canvas id="frequency-visualizer"></canvas>
                     </div>
                 </div>
 
-                <div class="progress-container">
-                    <input type="range" id="progress-bar" value="0" step="1">
-                    <div class="time-info">
-                        <span id="current-time">0:00</span>
-                        <span id="duration">0:00</span>
-                    </div>
-                </div>
-                
-                <div class="visualizer-container">
-                    <canvas id="frequency-visualizer"></canvas>
+                <div class="album-art-section">
+                    <img id="album-art" src="" alt="Album Art" class="album-art-image">
+                    <p class="album-placeholder">el album</p>
                 </div>
             </div>
             
