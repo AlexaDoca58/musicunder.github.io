@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNDERTALE Soundtrack</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <div class="main-container">
+        <header class="page-header">
+            <img class="logo" src="https://th.bing.com/th/id/R.9382d91dc04cbf18a465473335dab5e7?rik=7kI%2f34ttWHbbKg&riu=http%3a%2f%2fswitchplayer.net%2fwp-content%2fuploads%2f2018%2f10%2fUndertale-logo.jpg&ehk=xVMG3J5cIb29SwhpqzqxKOL41BjD9%2bylSHJmGzp5%2fWA%3d&risl=&pid=ImgRaw&r=0" alt="Logo de Undertale">
+            <h2>SOUNDTRACK</h2>
+        </header>
+
+        <nav class="navigation-bar">
+            <span class="nav-item active" data-section="music">música</span>
+            <span class="nav-item" data-section="creator">creador</span>
+        </nav>
+
+        <div id="music-section" class="content-section active">
+            <div class="player-visualizer-section">
+                <div class="player-controls">
+                    <button id="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                    <div class="track-info">
+                        <span id="track-title"></span>
+                    </div>
+                </div>
+
+                <div class="progress-container">
+                    <input type="range" id="progress-bar" value="0" step="1">
+                    <div class="time-info">
+                        <span id="current-time">0:00</span>
+                        <span id="duration">0:00</span>
+                    </div>
+                </div>
+                
+                <div class="visualizer-container">
+                    <canvas id="frequency-visualizer"></canvas>
+                </div>
+            </div>
+            
+            <div class="tracklist-container">
+                <ul id="tracklist-ul" class="tracklist">
+                </ul>
+            </div>
+        </div>
+
+        <div id="creator-section" class="content-section">
+            <div class="creator-container">
+                <div class="creator-bio-box">
+                    <div class="creator-photo">
+                        <img src="https://pm1.aminoapps.com/6249/fa244cf4a3e2e6062fe9b58538a5ba63f5ee6679_hq.jpg" alt="Toby Fox">
+                    </div>
+                    <div class="creator-info">
+                        <h3>Toby Fox</h3>
+                        <p>Toby Fox es el desarrollador y compositor principal de los aclamados videojuegos **Undertale** y **Deltarune**. Su trabajo es conocido por combinar elementos de la música de videojuegos de 16-bits con composiciones emocionales y memorables.</p>
+                        <p>También ha contribuido a la banda sonora de otros títulos, como Super Smash Bros. Ultimate y Pokémon Espada y Escudo.</p>
+                    </div>
+                </div>
+                <div class="other-works-box">
+                    <div class="other-works">
+                        <h3>Otros trabajos</h3>
+                        <div class="discography">
+                            <img src="https://pm1.narvii.com/6297/151671a9af49f97891330946db9648abd65da727_hq.jpg" alt="Portada de Undertale">
+                            <img src="https://tse3.mm.bing.net/th/id/OIP.2vWa9wgFIPOH-dMbUIQvgwHaHa?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Portada de Deltarune Chapter 1">
+                            <img src="https://tse2.mm.bing.net/th/id/OIP.S8sKD_yg5bxne_e_LHzRjwHaEK?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Portada de Deltarune Chapter 2">
+                            <img src="https://i1.sndcdn.com/avatars-mgQHr3vxw4fWwWoy-9bFBKA-t500x500.jpg" alt="Portada de Deltarune Chapter 3">
+                            <img src="https://i.ytimg.com/vi/tH2DyoVtR_Y/maxresdefault.jpg" alt="Portada de Deltarune Chapter 4">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
